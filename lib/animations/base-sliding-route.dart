@@ -11,9 +11,9 @@ class BaseSlidingRoute<T> extends MaterialPageRoute<T> {
     if (settings.isInitialRoute) return child;
 
     return new SlideTransition(
-      position: new FractionalOffsetTween(
-        begin: const FractionalOffset(0.0, 0.1),
-        end: const FractionalOffset(0.0, 0.0),
+      position: new Tween<Offset>(
+        begin: const Offset(0.0, 0.1),
+        end: const Offset(0.0, 0.0),
       )
       .animate(
         new CurvedAnimation(
